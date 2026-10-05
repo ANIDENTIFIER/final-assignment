@@ -83,7 +83,7 @@ const renderBarChart = (data) => {
     };
 
     barChart.setOption({
-        title: { text: "各图书馆座位使用情况", left: "center" },
+        title: { text: "各自习室座位使用情况", left: "center" },
         tooltip: { trigger: "axis" },
         legend: { bottom: 0 },
         xAxis: { data: data.buildings },
@@ -127,7 +127,7 @@ const renderPieChart = (data) => {
             responsive: true,
             maintainAspectRatio: false,
             plugins: {
-                title: { display: true, text: "图书馆座位使用情况" },
+                title: { display: true, text: "各自习室座位使用情况" },
             },
         },
     });
