@@ -36,8 +36,20 @@
     </div>
   </section>
 
-  
-  <div id="heat-3d" class="chart-box"></div>
+  <section class="row g-3 mt-4">
+    <div class="col-12">
+      <h2 class="h5">自习室座位三维热力墙（Three.js）</h2>
+      <p class="text-muted small" id="heat-info">按住鼠标拖动旋转，滚轮缩放，悬停方块查看详情</p>
+      <div id="heat-3d" class="chart-box"></div>
+      <p class="small mt-2">
+        方块颜色：<span class="badge text-bg-success">空闲较多</span>
+        <span class="badge text-bg-warning">一般</span>
+        <span class="badge text-bg-danger">紧张</span>
+        <span class="badge text-bg-secondary">停用</span>
+        ；每列一栋楼（从左到右：楠苑、梓苑、图书馆、理科楼、文科楼），自下而上为楼层。
+      </p>
+    </div>
+  </section>
 
   <script src="libs/jquery-3.7.1.min.js"></script>
   <script src="libs/bootstrap.bundle.min.js"></script>
