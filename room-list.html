@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自习室查询</title>
+  <link href="libs/bootstrap.min.css" rel="stylesheet">
+  <style>
+    #status { display: none; }
+  </style>
+</head>
+<body class="container py-4">
+  <nav class="mb-3">
+    <a class="me-3" href="index.html">首页</a>
+    <a href="room-list.html">自习室查询</a>
+  </nav>
+
+  <header>
+    <h1 class="h3">自习室查询</h1>
+    <p class="text-muted">可按楼宇、状态筛选，支持名称搜索和按空闲座位数排序</p>
+  </header>
+
+  <p id="status" class="alert alert-warning"></p>
+
+  <section class="row g-2 mb-4">
+    <div class="col-md-3">
+      <select id="building-select" class="form-select">
+        <option value="">全部楼宇</option>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <div class="btn-group" id="status-group">
+        <button type="button" class="btn btn-outline-secondary btn-sm active" data-status="">全部</button>
+        <button type="button" class="btn btn-outline-secondary btn-sm" data-status="开放">开放</button>
+        <button type="button" class="btn btn-outline-secondary btn-sm" data-status="维修">维修</button>
+        <button type="button" class="btn btn-outline-secondary btn-sm" data-status="闭馆">闭馆</button>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <input type="text" id="search-input" class="form-control" placeholder="搜索自习室名称">
+    </div>
+    <div class="col-md-3">
+      <button type="button" id="sort-btn" class="btn btn-outline-primary w-100">按空闲座位数排序</button>
+    </div>
+  </section>
+
+  <p id="empty-tip" class="text-muted d-none">没有找到符合条件的自习室</p>
+  <section class="row g-3" id="room-list"></section>
+
+  <script src="libs/jquery-3.7.1.min.js"></script>
+  <script src="libs/bootstrap.bundle.min.js"></script>
+  <script src="js/room-list.js"></script>
+</body>
+</html>
